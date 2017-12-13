@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.blogspot.anindyabhandari.filelocker.UpdateFile">
+
+    <EditText
+        android:id="@+id/editText7"
+        android:layout_width="325dp"
+        android:layout_height="56dp"
+        android:ems="10"
+        android:hint="Network Password"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/button17"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText9" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="296dp"
+        android:layout_height="63dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/editText9"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button17"
+        android:layout_width="152dp"
+        android:layout_height="wrap_content"
+        android:onClick="onSubmit"
+        android:text="Update"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editText7" />
+
+    <EditText
+        android:id="@+id/editText9"
+        android:layout_width="318dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Network Name"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editText7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView21" />
+</android.support.constraint.ConstraintLayout>
