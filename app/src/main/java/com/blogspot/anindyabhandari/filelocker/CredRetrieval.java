@@ -19,6 +19,7 @@ import static com.blogspot.anindyabhandari.filelocker.SecretKeyStore.getSecretKe
 
 public class CredRetrieval extends AppCompatActivity {
     final int intentcode = 1912;
+    final int intentcode2 = 1913;
     String networkName="DoesNotExist";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +27,8 @@ public class CredRetrieval extends AppCompatActivity {
         setContentView(R.layout.activity_cred_retrieval);
         Intent intent = getIntent();
         networkName = intent.getStringExtra("NetworkName");
-        getTheCred(0,"");
+        Intent update = new Intent(this, SyncMode.class);
+        startActivityForResult(update,intentcode2);
     }
     public void getTheCred(int ix, String password)
     {
@@ -110,6 +112,10 @@ public class CredRetrieval extends AppCompatActivity {
             if (resultCode == RESULT_CANCELED) {
                 finish();
             }
+        }
+        else if(requestCode == intentcode2)
+        {
+            getTheCred(0,"");
         }
     }
     protected void showMessage(String message) {
